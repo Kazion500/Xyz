@@ -1,0 +1,300 @@
+/** @format */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Tw Cen MT";
+  line-height: 1.5;
+  width: 100vw;
+}
+h1,
+h3 {
+  text-transform: uppercase;
+}
+p {
+  color: #222;
+}
+a {
+  text-decoration: none;
+}
+
+#header {
+  background-color: #111;
+}
+/*
+================== 
+Navbar 
+==================
+*/
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5em;
+  height: 60px;
+}
+.nav-items {
+  background-color: #111;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  list-style: none;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.nav-item {
+  margin: 1em 0;
+}
+.nav-item a {
+  color: #f3f3f5;
+  padding: 1em 50vw;
+}
+.nav-item a:hover,
+.nav-item a:focus {
+  background-color: rgba(26, 26, 26, 0.5);
+}
+.nav-brand {
+  font-family: "Monotype Corsiva";
+  font-size: 1.4em;
+  color: #f3f3f5;
+}
+.nav-brand span {
+  color: #ffc904;
+}
+
+.bar {
+  cursor: pointer;
+  padding: 20px 0 20px 10px;
+}
+.bars {
+  background-color: #ffc904;
+  width: 30px;
+  height: 3px;
+  position: relative;
+}
+.bars::before,
+.bars::after {
+  content: "";
+  position: absolute;
+  background-color: #ffc904;
+  width: 30px;
+  height: 3px;
+}
+.bars::before {
+  top: 8px;
+}
+.bars::after {
+  bottom: 8px;
+}
+/*
+================== 
+ Sub header 
+==================
+*/
+.sub-header {
+  background-color: #ffc904;
+  height: 100vh;
+  width: 100%;
+}
+.sec-container {
+  padding: 1.5em 1.5em;
+  width: 100%;
+  height: fit-content;
+  max-height: 1080px;
+  min-height: 568px;
+  position: relative;
+}
+h1 {
+  font-size: 2.6em;
+  line-height: 0.9;
+}
+h1 span {
+  color: rgb(136, 136, 2);
+}
+p {
+  font-size: 1.14em;
+  text-align: justify;
+  padding: 0.2em 0 1em;
+}
+.btn {
+  display: inline-block;
+  border: 3px solid;
+  color: #111111;
+  padding: 0.3em 1.3em;
+  border-radius: 3px;
+}
+.social-i {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  float: left;
+  margin-top: 18%;
+  width: 20%;
+  height: fit-content;
+}
+.social-i img {
+  width: 55%;
+  min-width: 20px;
+  max-width: 48px;
+  padding: 0.3em;
+  cursor: pointer;
+}
+.hero-img {
+  margin-top: 7%;
+  height: 155px;
+  width: 78%;
+  float: right;
+  border-radius: 5px;
+  object-fit: cover;
+}
+/*
+================== 
+ Media Query 
+==================
+*/
+@media only screen and (min-width: 375px) {
+  .social-i {
+    margin-top: 33%;
+  }
+  .hero-img {
+    height: 270px;
+  }
+}
+@media only screen and (min-width: 414px) {
+  .sec-container {
+    padding: 3em 1.5em;
+  }
+  .social-i {
+    margin-top: 35%;
+  }
+  .hero-img {
+    height: 320px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    height: 70px;
+  }
+  p {
+    font-size: 1.5em;
+  }
+  h1 {
+    font-size: 4em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  .btn {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  .hero-img {
+    width: 80%;
+    height: 520px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .container {
+    padding: 0 3em;
+  }
+  .sec-container {
+    display: flex;
+    padding: 4em 3em;
+  }
+  .bar {
+    display: none;
+  }
+  .nav-items {
+    display: flex;
+    position: inherit;
+    flex-direction: row;
+    align-items: center;
+    height: inherit;
+  }
+  .nav-item {
+    padding: 10px 0 10px 20px;
+  }
+  .nav-item a {
+    display: inline-block;
+    padding: inherit;
+    font-size: 1.2em;
+  }
+  .nav-item a:hover,
+  .nav-item a:focus {
+    background-color: transparent;
+    color: rgb(206, 206, 206);
+  }
+  .social-i {
+    position: absolute;
+    bottom: 1em;
+  }
+  .content {
+    width: 70%;
+  }
+  .social-i img {
+    width: 40px;
+  }
+  h1 {
+    font-size: 3.6em;
+  }
+  .hero-img {
+    width: 70%;
+    height: 450px;
+    margin-left: 3em;
+    border-radius: 50%;
+  }
+  .nav-brand {
+    font-size: 2.3em;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1366px;
+    margin: auto;
+  }
+  .content {
+    width: 60%;
+    margin-right: 9em;
+  }
+  .sec-container {
+    max-width: 1366px;
+    margin: auto;
+  }
+  .social-i {
+    bottom: 5em;
+  }
+  h1 {
+    font-size: 4em;
+  }
+  .hero-img {
+    width: 60%;
+    height: 500px;
+    margin-right: -1.4em;
+  }
+  body {
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .sec-container {
+    padding: 13em 3em;
+  }
+  .social-i {
+    bottom: 13em;
+  }
+  .hero-img {
+    height: 600px;
+    width: 70%;
+    margin-top: 2em;
+  }
+}
